@@ -1,6 +1,6 @@
 "use client";
-import { FaUserFriends, FaUser, FaRegCommentDots } from "react-icons/fa";
-
+import { FaRegCommentDots } from "react-icons/fa";
+import { HiUserGroup } from "react-icons/hi2";
 const PlayersList = () => {
   const players = [
     { name: "Alex Mercer", initials: "AM", isHost: true },
@@ -11,13 +11,13 @@ const PlayersList = () => {
   ];
 
   return (
-    <main className="flex flex-col gap-6 p-6 mx-auto max-w-screen-md">
+    <main className="flex flex-col gap-6 my-5 px-10 mx-auto ">
       <header className="flex justify-between items-center">
         <h1 className="text-3xl font-bold text-neutral-900">Players</h1>
 
         {/* Player Count */}
         <div className="flex gap-2 items-center">
-          <FaUserFriends className="text-2xl text-neutral-900" />
+          <HiUserGroup className="text-2xl text-neutral-900" />
           <span className="text-2xl text-neutral-900">{players.length}/11</span>
         </div>
       </header>
@@ -27,7 +27,7 @@ const PlayersList = () => {
         {players.map((player, index) => (
           <article
             key={index}
-            className="flex justify-between items-center p-4 rounded-2xl bg-slate-600"
+            className="flex justify-between items-center p-4 rounded-2xl bg-[#34735F]"
           >
             <div className="flex gap-4 items-center">
               {/* Player Initials */}
@@ -45,10 +45,9 @@ const PlayersList = () => {
 
             {/* Message Button */}
             <button
-              className="flex items-center gap-2 px-4 py-3 bg-white rounded-xl text-neutral-900 hover:bg-gray-100"
+              className="flex items-center gap-2 px-4 py-3 bg-white rounded-xl text-neutral-900 hover:bg-gray-100 cursor-pointer"
               aria-label={`Message ${player.name}`}
             >
-              <FaRegCommentDots />
               <span>Message</span>
             </button>
           </article>

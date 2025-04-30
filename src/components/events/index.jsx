@@ -9,6 +9,7 @@ import { BookingCard } from "./BookingCard";
 import GoodToKnowSection from "./GoodToKnowSection";
 import SimilarEvents from "./SimilarEvents";
 import PlayersList from "./Players";
+import CommentList from "./CommentList";
 
 const EventPage = () => {
   const [activeTab, setActiveTab] = useState("info");
@@ -53,6 +54,11 @@ const EventPage = () => {
       priceNote: "(both)",
     },
   };
+  const tabs = [
+    { id: "info", label: "Info" },
+    { id: "player", label: "Player" },
+    { id: "comments", label: "Comments" },
+  ];
   return (
     <main className=" mt-10">
       <PhotoGallery {...eventDetails.gallery} />
@@ -63,7 +69,11 @@ const EventPage = () => {
             <div className="md:hidden block">
               <BookingCard {...eventDetails.booking} />
             </div>
-            <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
+            <TabNavigation
+              activeTab={activeTab}
+              tabs={tabs}
+              setActiveTab={setActiveTab}
+            />
             {activeTab === "info" && (
               <section>
                 <div className="px-10">
@@ -76,6 +86,11 @@ const EventPage = () => {
             {activeTab === "player" && (
               <section>
                 <PlayersList />
+              </section>
+            )}
+            {activeTab === "comments" && (
+              <section>
+                <CommentList />
               </section>
             )}
           </div>

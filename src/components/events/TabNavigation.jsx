@@ -1,9 +1,4 @@
-export const TabNavigation = ({ activeTab, setActiveTab }) => {
-  const tabs = [
-    { id: "info", label: "Info" },
-    { id: "player", label: "Player" },
-    { id: "comments", label: "Comments" },
-  ];
+export const TabNavigation = ({ activeTab, setActiveTab, tabs }) => {
 
   return (
     <nav className="grid grid-cols-3 w-full mt-10 text-2xl font-medium border-b border-[#E5E5E5] px-10">
