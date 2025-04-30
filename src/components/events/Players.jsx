@@ -1,0 +1,61 @@
+"use client";
+import { FaUserFriends, FaUser, FaRegCommentDots } from "react-icons/fa";
+
+const PlayersList = () => {
+  const players = [
+    { name: "Alex Mercer", initials: "AM", isHost: true },
+    { name: "Jamir Uddin", initials: "JU", isHost: false },
+    { name: "Biplu Ahmed", initials: "BA", isHost: false },
+    { name: "Topu Barman", initials: "TB", isHost: false },
+    { name: "Rakib Hossain", initials: "RH", isHost: false },
+  ];
+
+  return (
+    <main className="flex flex-col gap-6 p-6 mx-auto max-w-screen-md">
+      <header className="flex justify-between items-center">
+        <h1 className="text-3xl font-bold text-neutral-900">Players</h1>
+
+        {/* Player Count */}
+        <div className="flex gap-2 items-center">
+          <FaUserFriends className="text-2xl text-neutral-900" />
+          <span className="text-2xl text-neutral-900">{players.length}/11</span>
+        </div>
+      </header>
+
+      {/* Players List */}
+      <section className="flex flex-col gap-3">
+        {players.map((player, index) => (
+          <article
+            key={index}
+            className="flex justify-between items-center p-4 rounded-2xl bg-slate-600"
+          >
+            <div className="flex gap-4 items-center">
+              {/* Player Initials */}
+              <div className="w-12 h-12 text-lg font-bold bg-orange-100 rounded-full text-slate-600 flex items-center justify-center">
+                {player.initials}
+              </div>
+
+              <h2 className="text-xl text-orange-100">
+                {player.name}
+                {player.isHost && (
+                  <span className="text-base ml-2">(Host)</span>
+                )}
+              </h2>
+            </div>
+
+            {/* Message Button */}
+            <button
+              className="flex items-center gap-2 px-4 py-3 bg-white rounded-xl text-neutral-900 hover:bg-gray-100"
+              aria-label={`Message ${player.name}`}
+            >
+              <FaRegCommentDots />
+              <span>Message</span>
+            </button>
+          </article>
+        ))}
+      </section>
+    </main>
+  );
+};
+
+export default PlayersList;

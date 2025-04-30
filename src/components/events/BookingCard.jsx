@@ -1,5 +1,5 @@
 export const BookingCard = ({ spotsLeft, price, priceNote }) => (
-  <aside className="sticky top-10 right-10  self-start p-6 bg-white rounded-2xl min-w-60 w-[400px]">
+  <aside className="   mx-auto p-6 bg-white rounded-2xl min-w-60 w-[400px]">
     <div className="flex justify-between items-center p-4 w-full border border-[#E5E5E5] rounded-xl">
       <span className="text-base font-medium text-red-500">
         {spotsLeft} spots left

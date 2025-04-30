@@ -8,6 +8,7 @@ import { HostProfile } from "./HostProfile";
 import { BookingCard } from "./BookingCard";
 import GoodToKnowSection from "./GoodToKnowSection";
 import SimilarEvents from "./SimilarEvents";
+import PlayersList from "./Players";
 
 const EventPage = () => {
   const [activeTab, setActiveTab] = useState("info");
@@ -52,7 +53,6 @@ const EventPage = () => {
       priceNote: "(both)",
     },
   };
-
   return (
     <main className=" mt-10">
       <PhotoGallery {...eventDetails.gallery} />
@@ -60,6 +60,9 @@ const EventPage = () => {
         <div className="flex flex-wrap gap-10 w-full">
           <div className="flex-1 shrink basis-12 min-w-60">
             <EventHeader {...eventDetails.header} />
+            <div className="md:hidden block">
+              <BookingCard {...eventDetails.booking} />
+            </div>
             <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
             {activeTab === "info" && (
               <section>
@@ -70,12 +73,17 @@ const EventPage = () => {
                 </div>
               </section>
             )}
+            {activeTab === "player" && (
+              <section>
+                <PlayersList />
+              </section>
+            )}
           </div>
-          <BookingCard {...eventDetails.booking} />
+          <div className="sticky top-10 right-10 self-start">
+            <BookingCard {...eventDetails.booking} />
+          </div>
         </div>
-        {
-          activeTab === 'info' && <SimilarEvents />
-        }
+        {activeTab === "info" && <SimilarEvents />}
       </div>
     </main>
   );

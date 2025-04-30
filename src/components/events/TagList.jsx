@@ -1,4 +1,3 @@
-// TagList.jsx
 export const TagList = ({ tags }) => (
   <div className="flex flex-wrap gap-4 items-center">
     {tags.map((tag) => (

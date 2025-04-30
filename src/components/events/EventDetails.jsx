@@ -3,14 +3,14 @@ import { DifficultyIndicator } from "./DifficultyIndicator";
 import { TagList } from "./TagList";
 
 export const EventDetails = ({ details }) => (
-  <section className="py-16 w-full border-b border-[#E5E5E5]">
-    <div className="flex pb-16 flex-wrap justify-between gap-2 items-center">
+  <section className="md:py-16 py-8 w-full border-b border-[#E5E5E5]">
+    <div className="flex md:pb-16 pb-8 flex-wrap justify-between gap-2 items-center">
       <TagList tags={details.tags} />
       <DifficultyIndicator difficulty={details.difficulty} />
     </div>
 
     <hr className="border-[#E5E5E5]" />
-    <div className="py-16 border-b border-[#E5E5E5]">
+    <div className="md:py-16 py-8 border-b border-[#E5E5E5]">
       <h2 className="text-3xl font-bold text-neutral-900">About this event</h2>
       <p className="mt-10 text-md leading-6 text-secondary-foreground w-10/12">
         {details.description}
@@ -20,7 +20,7 @@ export const EventDetails = ({ details }) => (
       </h1>
     </div>
 
-    <div className="pt-16">
+    <div className="md:pt-16 pt-8">
       <h2 className="text-3xl font-bold text-neutral-900">Location</h2>
       <div className="flex flex-wrap gap-20 items-start mt-10">
         <div className=" min-w-60">

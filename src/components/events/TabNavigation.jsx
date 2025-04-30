@@ -10,9 +10,9 @@ export const TabNavigation = ({ activeTab, setActiveTab }) => {
       {tabs.map((tab) => (
         <button
           key={tab.id}
-          className={`w-full text-center mx-auto pb-5 ${
+          className={`w-full text-center mx-auto pb-5 cursor-pointer ${
             activeTab === tab.id
-              ? "text-red-500 border-b-2 border-[#DA6049]"
+              ? "text-[#DA6049] border-b-2 border-[#DA6049]"
               : "text-neutral-900"
           }`}
           onClick={() => setActiveTab(tab.id)}
