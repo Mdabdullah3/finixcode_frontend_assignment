@@ -9,11 +9,9 @@ import { BookingCard } from "./BookingCard";
 import GoodToKnowSection from "./GoodToKnowSection";
 import SimilarEvents from "./SimilarEvents";
 import PlayersList from "./Players";
-import CommentList from "./CommentList";
-
+import CommentThread from "./CommentThread";
 const EventPage = () => {
   const [activeTab, setActiveTab] = useState("info");
-
   const eventDetails = {
     gallery: {
       mainImage: "/assets/imageSlider.png",
@@ -89,8 +87,8 @@ const EventPage = () => {
               </section>
             )}
             {activeTab === "comments" && (
-              <section>
-                <CommentList />
+              <section className="px-10">
+                <CommentThread />
               </section>
             )}
           </div>
