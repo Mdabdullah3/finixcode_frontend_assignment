@@ -2,7 +2,7 @@ import { FaHeart } from "react-icons/fa";
 import { RiShare2Line } from "react-icons/ri";
 import { IoEllipsisVerticalOutline } from "react-icons/io5";
 export const EventHeader = ({ title, venue, datetime }) => (
-  <header className="flex px-10 flex-wrap gap-10 justify-between items-start pb-14 w-full">
+  <header className="flex md:px-10 px-5 flex-wrap gap-10 justify-between items-start pb-14 w-full">
     <div className="min-w-60">
       <h1 className="text-3xl font-black leading-none text-neutral-900 md:text-5xl">
         {title}

@@ -58,7 +58,7 @@ const EventPage = () => {
     { id: "comments", label: "Comments" },
   ];
   return (
-    <main className=" mt-10">
+    <main className=" md:mt-10 mt-5">
       <PhotoGallery {...eventDetails.gallery} />
       <div className="mt-12">
         <div className="flex flex-wrap gap-10 w-full">
@@ -74,7 +74,7 @@ const EventPage = () => {
             />
             {activeTab === "info" && (
               <section>
-                <div className="px-10">
+                <div className="md:px-10 px-5">
                   <EventDetails details={eventDetails} />
                   <GoodToKnowSection />
                   <HostProfile host={eventDetails.host} />
@@ -92,7 +92,7 @@ const EventPage = () => {
               </section>
             )}
           </div>
-          <div className="sticky top-10 right-10 self-start">
+          <div className="sticky top-10 right-10 self-start hidden md:block">
             <BookingCard {...eventDetails.booking} />
           </div>
         </div>

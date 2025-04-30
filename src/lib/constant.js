@@ -40,3 +40,11 @@ export const eventsData = [
         price: "320",
     },
 ];
+
+
+export const images = [
+    "/assets/imageSlider.png",
+    "/assets/imageSlider02.jpg",
+    "/assets/imageSlider03.jpg",
+    "/assets/imageSlider02.png",
+  ];
