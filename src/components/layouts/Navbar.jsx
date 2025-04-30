@@ -1,5 +1,5 @@
 "use client";
-import { FaRegCalendarAlt, FaTrophy } from "react-icons/fa";
+import { FaTrophy } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import Image from "next/image";
 import { FaCircleUser } from "react-icons/fa6";
@@ -41,7 +41,7 @@ export default function Navbar() {
             placeholder="Search"
             className="pl-4 border-none pr-10 bg-white rounded-[99px] text-md text-neutral-500 w-full shadow-[0px_3px_8px_rgba(0,0,0,0.1)]"
           />
-          <div className="absolute right-2 flex items-center justify-center w-9 h-9 bg-neutral-200 rounded-full">
+          <div className="absolute right-2 flex items-center justify-center w-9 h-9 bg-neutral-200 rounded-full cursor-pointer">
             <LuSearch className="text-gray-600 w-[21px] h-[21px]" />
           </div>
         </div>

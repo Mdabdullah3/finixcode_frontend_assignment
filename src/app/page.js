@@ -1,9 +1,10 @@
+import EventPage from '@/components/events';
 import React from 'react';
 
 const Home = () => {
   return (
     <div>
-      <h1>Hello..</h1>
+      <EventPage />
     </div>
   );
 };
