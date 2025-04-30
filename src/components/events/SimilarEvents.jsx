@@ -2,13 +2,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import {
-  FaLocationDot,
-  FaUserGroup,
-  FaArrowLeft,
-  FaArrowRight,
-} from "react-icons/fa6";
-import { FaTrophy } from "react-icons/fa";
+import { FaLocationDot, FaUserGroup } from "react-icons/fa6";
+import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -17,8 +12,8 @@ import { eventsData } from "@/lib/constant";
 const SimilarEvents = () => {
   const events = eventsData;
   return (
-    <section className="p-10 bg-white md:px-5">
-      <div className="max-w-7xl mx-auto">
+    <section className="p-10 bg-white md:px-10">
+      <div className="w-full mx-auto">
         <EventSectionHeader />
         <Swiper
           modules={[Navigation]}
@@ -52,11 +47,11 @@ const EventSectionHeader = () => (
       Other events you may like
     </h2>
     <div className="flex gap-4">
-      <button className="prev-button flex items-center justify-center w-12 h-12 bg-stone-100 rounded-full cursor-pointer">
-        <FaArrowLeft className="text-gray-600" />
-      </button>
       <button className="next-button flex items-center justify-center w-12 h-12 bg-stone-100 rounded-full cursor-pointer">
-        <FaArrowRight className="text-gray-600" />
+        <MdArrowBackIos size={20} className="text-gray-600" />
+      </button>
+      <button className="prev-button flex items-center justify-center w-12 h-12 bg-stone-100 rounded-full cursor-pointer">
+        <MdArrowForwardIos size={20} className="text-gray-600" />
       </button>
     </div>
   </header>
@@ -92,7 +87,7 @@ const EventCard = ({
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
-                className="w-1 bg-emerald-300" 
+                className="w-1 bg-emerald-300"
                 style={{ height: `${i * 3}px` }}
               />
             ))}
