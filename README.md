@@ -81,11 +81,11 @@ finixcode-event-platform/
 
 ## Implementation Notes
 
--Followed Figma design specifications precisely
--Used CSS variables for consistent theming
--Optimized images with Next.js Image component
--Implemented accessibility best practices
--Added smooth transitions and animations
+- Followed Figma design specifications precisely
+- Used CSS variables for consistent theming
+- Optimized images with Next.js Image component
+- Implemented accessibility best practices
+- Added smooth transitions and animations
 
 ### Submission for FinixCode Frontend Developer Position
 
