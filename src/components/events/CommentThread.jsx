@@ -3,63 +3,9 @@ import React from "react";
 import { FaRegClock } from "react-icons/fa";
 import { BsArrowReturnRight } from "react-icons/bs";
 import { Input } from "../ui/input";
+import { comments } from "@/lib/constant";
 
 const CommentThread = () => {
-  const comments = [
-    {
-      id: 1,
-      avatar: "AM",
-      name: "Alex Mercer",
-      time: "14 min",
-      content: "Looking forward to the game! What's the final player count?",
-      isPrimary: true,
-      replies: [
-        {
-          id: 2,
-          avatar: "RK",
-          name: "Rifat Khan",
-          time: "14 min",
-          content: "missing few players",
-          isPrimary: false,
-        },
-        {
-          id: 3,
-          avatar: "RK",
-          name: "Rifat Khan",
-          time: "14 min",
-          content: "got any friends?",
-          isPrimary: false,
-        },
-      ],
-    },
-    {
-      id: 4,
-      avatar: "AM",
-      name: "Alex Mercer",
-      time: "14 min",
-      content: "Looking forward to the game! What's the final player count?",
-      isPrimary: true,
-    },
-    {
-      id: 5,
-      avatar: "AM",
-      name: "Alex Mercer",
-      time: "14 min",
-      content: "Looking forward to the game! What's the final player count?",
-      isPrimary: true,
-      replies: [
-        {
-          id: 6,
-          avatar: "RK",
-          name: "Rifat Khan",
-          time: "14 min",
-          content: "got any friends?",
-          isPrimary: false,
-        },
-      ],
-    },
-  ];
-
   return (
     <section className="bg-white rounded-3xl  w-full my-10 p-5">
       <div className=" space-y-6">
@@ -77,6 +23,8 @@ const CommentThread = () => {
   );
 };
 
+// Reusable component for comments and replies
+// this is the parent component of the comment item
 const CommentItem = ({ comment }) => {
   return (
     <div className="space-y-4">

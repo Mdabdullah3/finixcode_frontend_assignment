@@ -1,4 +1,5 @@
-export const TabNavigation = ({ activeTab, setActiveTab, tabs }) => {
+import { tabs } from "@/lib/constant";
+export const TabNavigation = ({ activeTab, setActiveTab }) => {
   return (
     <section className="md:px-10 px-5">
       <nav className="grid grid-cols-3 w-full mt-10 md:text-2xl text-lg font-medium border-b border-[#E5E5E5] ">

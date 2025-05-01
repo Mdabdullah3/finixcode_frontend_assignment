@@ -52,8 +52,7 @@ const GoodToKnowSection = () => {
     </section>
   );
 };
-
-// Reusable InfoItem component
+// Reusable InfoItem component for displaying information items in GoodToKnowSection 
 const InfoItem = ({ icon, text }) => {
   return (
     <div className="flex gap-2 items-center w-full">
@@ -62,5 +61,4 @@ const InfoItem = ({ icon, text }) => {
     </div>
   );
 };
-
 export default GoodToKnowSection;

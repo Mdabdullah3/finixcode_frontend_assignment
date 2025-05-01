@@ -7,10 +7,8 @@ import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
-import { eventsData } from "@/lib/constant";
-
+import { events } from "@/lib/constant";
 const SimilarEvents = () => {
-  const events = eventsData;
   return (
     <section className="p-10 bg-white md:px-10">
       <div className="w-full mx-auto">
@@ -40,7 +38,7 @@ const SimilarEvents = () => {
     </section>
   );
 };
-
+// Reusable components used in SimilarEvents component  
 const EventSectionHeader = () => (
   <header className="flex justify-between items-center">
     <h2 className="text-2xl font-bold text-gray-800">
@@ -56,7 +54,6 @@ const EventSectionHeader = () => (
     </div>
   </header>
 );
-
 const EventCard = ({
   image,
   title,
@@ -108,7 +105,6 @@ const EventCard = ({
           <address className="not-italic">{location}</address>
         </div>
       </div>
-
       <div className="mt-6 flex justify-between items-end">
         <div className="text-sm text-neutral-900">
           <FaUserGroup className="inline mr-1" />
@@ -130,5 +126,4 @@ const EventCard = ({
     </div>
   </article>
 );
-
 export default SimilarEvents;

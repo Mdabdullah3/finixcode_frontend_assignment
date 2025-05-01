@@ -9,10 +9,11 @@ export const PhotoGallery = () => {
   const mainSwiperRef = useRef(null);
   const secondarySwiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  // Function to get next image index
   const getNextImageIndex = (currentIndex) => {
     return (currentIndex + 1) % images.length;
   };
-
+  // Update secondary swiper on main swiper slide change
   useEffect(() => {
     if (mainSwiperRef.current && secondarySwiperRef.current) {
       const mainSwiper = mainSwiperRef.current.swiper;
@@ -57,7 +58,6 @@ export const PhotoGallery = () => {
               ))}
             </Swiper>
           </div>
-
           {/* Secondary Images Column */}
           <div className="md:flex hidden flex-col flex-1 shrink justify-center basis-0 min-w-60 md:max-w-full col-span-4">
             <div className="flex flex-col gap-3 h-[417px]">
@@ -70,7 +70,6 @@ export const PhotoGallery = () => {
                   alt="Next event image"
                 />
               </div>
-
               {/* Additional Photos Indicator */}
               <div className="flex-1 relative">
                 <div className="overflow-hidden w-full h-full text-3xl font-medium leading-none text-white rounded-3xl bg-neutral-900">

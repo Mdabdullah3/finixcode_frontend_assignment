@@ -5,41 +5,18 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
-import { X, Menu, Smartphone, Wallet } from "lucide-react";
 import Image from "next/image";
 
 export const PaymentPopup = ({ onClose }) => {
   const [selectedPayment, setSelectedPayment] = useState("bkash");
-
   const handleContinue = () => {
     console.log("Selected payment method:", selectedPayment);
     onClose();
   };
-
-  const paymentOptions = [
-    {
-      id: "bkash",
-      title: "bKash",
-      description:
-        "Send the payment now via bKash to confirm your spot instantly.",
-      icon: <Smartphone className="text-orange-100" />,
-      badge: "/assets/bkash-badge.svg",
-    },
-    {
-      id: "cash",
-      title: "Cash",
-      description:
-        "Pay the event fee directly to the host before the game starts.",
-      icon: <Wallet className="text-orange-100" />,
-      badge: "/assets/cash-badge.svg",
-    },
-  ];
-
   return (
     <Dialog open={true} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[400px] bg-[#34735F] border-none rounded-3xl p-8">
@@ -53,12 +30,10 @@ export const PaymentPopup = ({ onClose }) => {
               className="object-contain"
             />
           </div>
-
           <DialogTitle className="text-3xl font-bold text-center text-orange-100 pt-4">
             Choose Payment Method
           </DialogTitle>
         </DialogHeader>
-
         <div className="mt-6">
           <RadioGroup
             value={selectedPayment}
@@ -98,7 +73,6 @@ export const PaymentPopup = ({ onClose }) => {
             ))}
           </RadioGroup>
         </div>
-
         <Button
           onClick={handleContinue}
           className="w-full mt-6 bg-[#2B2B2B] hover:bg-orange-200 text-white rounded-full py-7 text-lg hover:text-[#2B2B2B]"
