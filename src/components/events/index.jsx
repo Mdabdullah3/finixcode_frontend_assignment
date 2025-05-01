@@ -10,8 +10,10 @@ import GoodToKnowSection from "./GoodToKnowSection";
 import SimilarEvents from "./SimilarEvents";
 import PlayersList from "./Players";
 import CommentThread from "./CommentThread";
+import { PaymentPopup } from "./JoinEvents";
 const EventPage = () => {
   const [activeTab, setActiveTab] = useState("info");
+  const [showPaymentPopup, setShowPaymentPopup] = useState(false);
   const eventDetails = {
     gallery: {
       mainImage: "/assets/imageSlider.png",
@@ -57,15 +59,25 @@ const EventPage = () => {
     { id: "player", label: "Player" },
     { id: "comments", label: "Comments" },
   ];
+  const handleJoinEvent = () => {
+    setShowPaymentPopup(true);
+  };
   return (
     <main className=" md:mt-10 mt-5">
+      {showPaymentPopup && (
+        <PaymentPopup onClose={() => setShowPaymentPopup(false)} />
+      )}
+
       <PhotoGallery {...eventDetails.gallery} />
       <div className="mt-12">
         <div className="flex flex-wrap gap-10 w-full">
           <div className="flex-1 shrink basis-12 min-w-60">
             <EventHeader {...eventDetails.header} />
             <div className="md:hidden block">
-              <BookingCard {...eventDetails.booking} />
+              <BookingCard
+                {...eventDetails.booking}
+                onJoinClick={handleJoinEvent}
+              />
             </div>
             <TabNavigation
               activeTab={activeTab}
@@ -93,7 +105,10 @@ const EventPage = () => {
             )}
           </div>
           <div className="sticky top-10 right-10 self-start hidden md:block">
-            <BookingCard {...eventDetails.booking} />
+            <BookingCard
+              {...eventDetails.booking}
+              onJoinClick={handleJoinEvent}
+            />
           </div>
         </div>
         {activeTab === "info" && <SimilarEvents />}
