@@ -48,7 +48,6 @@ export const images = [
     "/assets/imageSlider.png",
     "/assets/imageSlider02.jpg",
     "/assets/imageSlider03.jpg",
-    "/assets/imageSlider02.png",
 ];
 
 export const comments = [
@@ -155,27 +154,27 @@ export const tabs = [
 
 export const paymentOptions = [
     {
-      id: "bkash",
-      title: "bKash",
-      description:
-        "Send the payment now via bKash to confirm your spot instantly.",
-      icon: <Smartphone className="text-orange-100" />,
-      badge: "/assets/bkash-badge.svg",
+        id: "bkash",
+        title: "bKash",
+        description:
+            "Send the payment now via bKash to confirm your spot instantly.",
+        icon: <Smartphone className="text-orange-100" />,
+        badge: "/assets/bkash-badge.svg",
     },
     {
-      id: "cash",
-      title: "Cash",
-      description:
-        "Pay the event fee directly to the host before the game starts.",
-      icon: <Wallet className="text-orange-100" />,
-      badge: "/assets/cash-badge.svg",
+        id: "cash",
+        title: "Cash",
+        description:
+            "Pay the event fee directly to the host before the game starts.",
+        icon: <Wallet className="text-orange-100" />,
+        badge: "/assets/cash-badge.svg",
     },
-  ];
+];
 
- export const players = [
+export const players = [
     { name: "Alex Mercer", initials: "AM", isHost: true },
     { name: "Jamir Uddin", initials: "JU", isHost: false },
     { name: "Biplu Ahmed", initials: "BA", isHost: false },
     { name: "Topu Barman", initials: "TB", isHost: false },
     { name: "Rakib Hossain", initials: "RH", isHost: false },
-  ];
+];
