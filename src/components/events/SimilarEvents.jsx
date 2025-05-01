@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import { events } from "@/lib/constant";
 const SimilarEvents = () => {
   return (
-    <section className="p-10 bg-white md:px-10">
+    <section className="md:p-10 bg-white  p-5">
       <div className="w-full mx-auto">
         <EventSectionHeader />
         <Swiper
@@ -41,7 +41,7 @@ const SimilarEvents = () => {
 // Reusable components used in SimilarEvents component  
 const EventSectionHeader = () => (
   <header className="flex justify-between items-center">
-    <h2 className="text-2xl font-bold text-gray-800">
+    <h2 className="md:text-2xl text-lg font-bold text-gray-800">
       Other events you may like
     </h2>
     <div className="flex gap-4">

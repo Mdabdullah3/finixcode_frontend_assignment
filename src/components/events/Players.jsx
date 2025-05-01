@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import { players } from "@/lib/constant";
 const PlayersList = () => {
   return (
-    <main className="flex flex-col gap-6 my-5 px-10 mx-auto ">
+    <main className="flex flex-col gap-6 my-5 md:px-10 px-5 mx-auto ">
       <header className="flex justify-between items-center">
         <h1 className="text-3xl font-bold text-neutral-900">Players</h1>
         <div className="flex gap-2 items-center">

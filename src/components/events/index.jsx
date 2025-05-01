@@ -53,7 +53,7 @@ const EventPage = () => {
               </section>
             )}
             {activeTab === "comments" && (
-              <section className="px-10">
+              <section className="md:px-10 px-5">
                 <CommentThread />
               </section>
             )}
