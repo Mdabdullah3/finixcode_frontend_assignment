@@ -89,6 +89,6 @@ finixcode-event-platform/
 
 ### Submission for FinixCode Frontend Developer Position
 
-Completed by: Md Abdullah
-Submission Date: 01-05-2025
-Figma Design: [Link](https://www.google.com/url?q=https://www.figma.com/design/DJdC4C38XsUmUzyEiuwqUX/Finixcode-Frontend-Assignment&source=gmail&ust=1746165252310000&usg=AOvVaw1QIdRPaIRlSZqSFuwqdGr8)
+- Completed by: Md Abdullah
+- Submission Date: 01-05-2025
+- Figma Design: [Link](https://www.google.com/url?q=https://www.figma.com/design/DJdC4C38XsUmUzyEiuwqUX/Finixcode-Frontend-Assignment&source=gmail&ust=1746165252310000&usg=AOvVaw1QIdRPaIRlSZqSFuwqdGr8)
