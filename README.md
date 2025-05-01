@@ -6,7 +6,7 @@ A responsive event management interface built with Next.js, implementing the Fin
 
 ## Live Demo
 
-[live link]()
+[live link](https://finixcode-frontend-assignment-abdullah.vercel.app)
 
 ## Features
 
@@ -42,7 +42,7 @@ A responsive event management interface built with Next.js, implementing the Fin
 1. Clone the repository:
    ```bash
    git clone https://github.com/Mdabdullah3/finixcode_frontend_assignment.git
-   cd inixcode_frontend_assignment
+   cd finixcode_frontend_assignment
    ```
 2. Install dependencies:
    ```bash
@@ -59,7 +59,7 @@ A responsive event management interface built with Next.js, implementing the Fin
 The project is organized into the following directories:
 
 ```
-finixcode-event-platform/
+finixcode_frontend_assignment/
 ├── app/                    # Next.js app router
 │   ├── (main)/             # Main page routes
 │   ├── components/         # Reusable components
