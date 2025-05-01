@@ -2,7 +2,11 @@
 
 A responsive event management interface built with Next.js, implementing the FinixCode design specification.
 
-<img src="/assets/readme.png" width="800" alt="Event Platform Screenshot" />
+<img src="/public/assets/readme.png" width="800" alt="Event Platform Screenshot" />
+
+## Live Demo
+
+[live link]()
 
 ## Features
 
@@ -87,4 +91,4 @@ finixcode-event-platform/
 
 Completed by: Md Abdullah
 Submission Date: 01-05-2025
-Figma Design: [https://www.google.com/url?q=https://www.figma.com/design/DJdC4C38XsUmUzyEiuwqUX/Finixcode-Frontend-Assignment&source=gmail&ust=1746165252310000&usg=AOvVaw1QIdRPaIRlSZqSFuwqdGr8]
+Figma Design: [Link](https://www.google.com/url?q=https://www.figma.com/design/DJdC4C38XsUmUzyEiuwqUX/Finixcode-Frontend-Assignment&source=gmail&ust=1746165252310000&usg=AOvVaw1QIdRPaIRlSZqSFuwqdGr8)
