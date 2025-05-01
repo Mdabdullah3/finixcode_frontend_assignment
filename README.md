@@ -87,7 +87,7 @@ finixcode-event-platform/
 - Implemented accessibility best practices
 - Added smooth transitions and animations
 
-### Submission for FinixCode Frontend Developer Position
+### Submission for FinixCode Frontend Developer Assignment
 
 - Completed by: Md Abdullah
 - Submission Date: 01-05-2025
